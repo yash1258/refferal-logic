@@ -1,0 +1,63 @@
+<div id="formLayout">
+<form class="form" [formGroup]="paymentProfileForm" (ngSubmit)="onSubmit()">
+    <h3>User Details</h3>
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName">
+    </label>
+    
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+    
+    <label>
+      Email:   
+      <input type="text" formControlName="email">
+    </label>
+    
+    <div formGroupName="address">
+        <h3>Address</h3>
+      
+        <label>
+          Street:
+          <input type="text" formControlName="street">
+        </label>
+        
+        <label>
+          City:
+          <input type="text" formControlName="city">
+        </label>
+        
+        <label>
+          State:
+          <input type="text" formControlName="state">
+        </label>
+        
+        <label>
+          Zip Code:
+          <input type="text" formControlName="zip">
+        </label>
+        
+    </div>
+    
+    <div formGroupName="paymentDetails">
+        <h3>Transaction Details</h3>
+      
+        <label>
+          Product:
+          <input type="text" formControlName="productDetails">
+        </label>
+        
+        <label>
+          Amount:
+          <input type="text" formControlName="Amount">
+        </label>
+         
+    </div>
+  <input type="submit" value="Proceed">
+  <input type="button"  (click)="payWithRazor()"  value="Checkout">
+  <input type="button"  (click)="VerifyPayment()"  value="Verify">
+  </form>
+</div>
+

@@ -1,0 +1,33 @@
+.flexparent {
+    display: flex;
+    width:100%;
+    height:100%;
+    background:rgba(241, 235, 235, 0.712);
+    color: honeydew;
+
+}
+
+.flexchild {
+    display: flex;
+    width: 50%;
+    margin-left:50%;
+    height:100%;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: x-large;
+}
+
+.logo {
+    display: flex;
+    font-size: x-large;
+    color:black;
+    background:rgba(241, 235, 235, 0.712);
+    width:100%;
+    height:100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-right:45%;
+    box-sizing: border-box;
+
+}

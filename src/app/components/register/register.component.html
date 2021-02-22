@@ -1,0 +1,37 @@
+<div [formGroup]="registerForm" class="flex-item-1">
+    <br>
+
+    <input class="input-style" type="text" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="firstName" placeholder="First name">
+    <input class="input-style" type="text" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="lastName" placeholder="Last name">
+    <input class="input-style" type="text" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="emailAddress" placeholder="Email address">
+    <input class="input-style" type="text" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="address1" placeholder="Enter Building No, Town">
+    <input class="input-style" type="text" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="address_city" placeholder="Enter City">
+    <input class="input-style" type="text" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="address_state" placeholder="Enter State">
+    <input class="input-style" type="text" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="address_pincode" placeholder="Pincode">
+    <input class="input-style" type="text" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="mobileNumber" placeholder="Mobile number">
+    <input class="input-style" type="password" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="password" placeholder="Password">
+    <input class="input-style" type="password" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="cnfPassword" placeholder="Confirm Password">
+    <!-- <p *ngIf="registerForm.controls.cnfPassword.pristine && !checkPasswords(registerForm)">Password does not match !!</p> -->
+    <div class="flex-item-1-1">
+        <input class="input-style" type="radio" id="male" formControlName="gender" value="male">
+        <label for="male">Male</label><br>
+        <input class="input-style" type="radio" id="female" formControlName="gender" value="female">
+        <label for="female">Female</label><br>
+        <input class="input-style" type="radio" id="other" formControlName="gender" value="other">
+        <label for="other">Other</label>
+    </div>
+    <div>
+        <input class="input-style" type="checkbox" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="terms_condition">
+        <span style="color: white">I accept</span><a href="/terms_condition" style="color:white;" target="_blank"> Terms & Conditions</a>
+    </div>
+    <div class="button-flex">
+        <button class="button" type="button" [disabled] = "!registerForm.value.terms_condition && !registerForm.valid" [ngStyle]="{'background': registerForm.value.terms_condition && registerForm.valid? '#4caf50':'#f44336'}"  (click)="register()">Register</button>
+    </div>
+</div>
+<!-- <div class="flex-item-2">
+    <a class="nav-link-color" routerLinkActive="active" routerLink="/Home">Home</a>
+    <a class="nav-link-color" routerLinkActive="active" routerLink="/About">About</a>
+    <a class="nav-link-color" routerLinkActive="active" routerLink="/Help">Help</a>
+    <a class="nav-link-color" routerLinkActive="active" routerLink="/Help">Privacy</a>
+    <a class="nav-link-color" routerLinkActive="active" routerLink="/Terms">Terms</a>
+</div> -->

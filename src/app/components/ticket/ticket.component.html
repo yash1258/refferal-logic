@@ -1,0 +1,24 @@
+<h2 mat-dialog-tittle >Report Issue</h2>
+<mat-dialog-content>
+    <div [formGroup]="issueGroup" class="issueSection">
+        <div class="issueGroup">
+            <mat-form-field appearance="fill">
+            <mat-label>Product</mat-label>
+            <mat-select  formControlName = "productName" >
+            
+            <mat-option *ngFor ='let t of products' [value]="t.name" >
+                {{t.name}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <div class="issueSubject">
+    <input matInput formControlName="issueSubject" type="text" placeholder="Subject"></div>
+    <div class="emailText">
+    <textarea matInput formControlName="issueText" type="text" placeholder="Text"></textarea></div>
+    <div class="reportButton"><button mat-raised-button color="Primary" (click) = 'issueData()'>Report Issue</button>
+    </div>
+</div>
+    
+</div>
+</mat-dialog-content>

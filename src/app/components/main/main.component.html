@@ -1,0 +1,89 @@
+<ngx-spinner
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="square-jelly-box"
+>
+<p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+
+<div class="grid-parent">
+  <section class="profile">
+    <div class="profile-flex-container card">
+      <div style="width:100%;text-align: center;">
+        <fa-icon matTooltip="User" style="background:none;color: green" size="4x" [icon]="faUser"></fa-icon>
+      </div>
+
+      <div class="user-flexbox" *ngIf="user">
+        <div class="user-flexbox-child">
+          <div><b>First Name: </b>{{user.firstName}}</div>
+          <div><b>Email: </b>{{user.emailAddress}}</div>
+          <div><b>Gender: </b>{{user.gender}}</div>
+        </div>
+        <div class="user-flexbox-child">
+          <div><b>Last Name: </b>{{user.lastName}}</div>
+          <div><b>Contact No: </b>{{user.mobileNumber}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div *ngIf="!launch" class="marketplace product">
+    <div class="grid-2">
+      <div *ngFor="let product of toolsProduct; let i=index" class="grid-child card">
+        <div style="display:flex;flex-direction:column;width:100%;height:100%;">
+          <div style="height:70%;" class="grid-child-header">
+            <div class="grid-child-image"><img width="25%" src="assets/asset/{{product?.name}}"></div>
+            {{product?.name}}
+          </div>
+          <div style="height:20%;" class="grid-child-footer">
+            <fa-icon size="2x" matTooltip="Info" (click)="info(product.description)" style="color:#34a4eb"
+              [icon]="faInfoCircle"></fa-icon>
+            <a href="{{product.tutorial}}" matTooltip="Tutorials" target="_blank">
+              <fa-icon size="2x" style="color:#34ebd3;" [icon]="faTv"></fa-icon>
+            </a>
+            <button style="color:rebeccapurple;background:none;border:none;"
+              *ngIf="!subscribedAnalysis[product._id] &&product.launchable" (click)="clickMe(product, 'NEW')">
+              <fa-icon matTooltip="Subscribe" size="2x" [icon]="faShoppingCart"></fa-icon>
+            </button>
+          </div>
+          <div style="height:10%;" class="grid-price card">
+            &#8377; {{product.price}}/{{product.subscriptionTime}} days
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section *ngIf="launch" class="subscribed_product product">
+    <div class="grid-2 card">
+      <div style="width:100%;height:100%;display:flex;justify-content:center;align-items:center;flex-direction: column;">
+        <div>Product Subscribed: {{product.product_id.name}}</div>
+        <div>Days Remaining: {{subscribedAnalysis[product._id]?.expiry}}</div>
+        <button style="color:rebeccapurple;background:none;border:none;"
+        *ngIf="subscribedAnalysis[product._id]" (click)="clickMe(product.product_id, 'EXTEND_LICENCE')">
+        <fa-icon matTooltip="Extend License" size="2x" [icon]="faShoppingCart"></fa-icon>
+        Extend Licence
+      </button>
+      <button style="color:rgb(11, 9, 14);background:none;border:none;"
+      *ngIf="product.product_id.name !=='Xponential Plus'" (click)="upgradeProduct()">
+      <fa-icon matTooltip="Extend License" size="2x" [icon]="faRocket"></fa-icon>
+      Upgrage to Premium
+    </button>
+      </div>
+    </div>
+  </section>
+  <section class="launch">
+    <div *ngIf="launch" class="launch-card card">
+      <div class="launch-button" >
+        <div>
+          <a href="{{api}}{{product.product_id.url}}flipprice?token={{token}}" style="background:none;color: green"
+            target="_blank">
+            <fa-icon matTooltip="Launch" size="4x" [icon]="faRocket"></fa-icon>
+          </a>
+          <div style="text-align: center;padding-top:5px">Launch</div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+</div>

@@ -1,0 +1,35 @@
+{
+  "name": "razorpaynode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node server.js",
+    "qa": "cross-env NODE_ENV=qa cd src && node app.js",
+    "prod": "cross-env NODE_ENV=production node server.js",
+    "demo": "cross-env NODE_ENV=demo cd src && node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "http-status-codes": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "mongodb": "^3.6.0",
+    "mongoose": "^5.9.28",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.11",
+    "razorpay": "^2.0.6",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "config": "^3.3.3"
+  }
+}

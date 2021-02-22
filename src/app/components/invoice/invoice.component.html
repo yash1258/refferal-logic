@@ -1,0 +1,43 @@
+<div class="grid-container">
+    <div class="grid-head">
+        <div class="flex-head-item-1">
+            <div class="fw-20">Xponential</div>
+          </div>
+    </div>
+    <div class="grid-body">
+        
+            
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th><h1>Invoice No.</h1></th>
+                        <th><h1>First Name</h1></th>
+                        <th><h1>Last Name</h1></th>
+                        <th><h1>Email</h1></th>
+                        <th><h1>Address</h1></th>
+                        <th><h1>City</h1></th>
+                        <th><h1>State</h1></th>
+                        <th><h1>Pincode</h1></th>
+                        <th><h1>Product Name</h1></th>
+                        <th><h1>Product Price</h1></th>
+                        <th><h1>Date of Invoice</h1></th>
+                    </tr>
+                </thead>
+                <tbody  *ngFor="let transaction of transactions">
+                    <tr>
+                        <td>{{transaction.invoice_number}}</td>
+                        <td>{{transaction.user_firstName}}</td>
+                        <td>{{transaction.user_lastName}}</td>
+                        <td>{{transaction.user_emailAddress}}</td>
+                        <td>{{transaction.user_address1}}</td>
+                        <td>{{transaction.user_address_city}}</td>
+                        <td>{{transaction.user_address_state}}</td>
+                        <td>{{transaction.user_address_pincode}}</td>
+                        <td>{{transaction.product_name}}</td>
+                        <td>{{transaction.product_price}}</td>
+                        <td>{{transaction.date_of_invoice}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</div>

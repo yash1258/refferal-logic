@@ -1,0 +1,34 @@
+<!-- <div class="grid-container">
+  <div class="grid-head">
+    <div class="flex-head-item-1">
+      <div class="fw-20">Xponential</div>
+    </div>
+    <div style="padding:0.4%; display: flex; justify-content: center;" >
+      <a style="color: white; padding-right: 12%; font-weight: bolder;" routerLink="/invoice" routerLinkActive="active">Orders</a>
+      <button style="text-align: center; background-color: white; color: #1f3342; padding-top: 1%; padding-bottom: 1%;border-radius: 10px; " (click)="logout()">EXIT</button>
+    </div>
+  </div>
+  <div class="grid-parent">
+      <div class="grid-item">
+          <div class="flex-parent">
+            <span class="flex-label" style="text-align:top; font-size: x-large;">Xpo-Tools</span>
+            <div *ngFor="let product of toolsProduct; let i=index" class="grid-child">
+              <div class="grid-renew">
+                <div class="grid-child-header">{{product.name}}</div>
+                <div class="grid-child-body"> {{product.description}}</div> 
+                <div class="grid-child-footer">
+                  <div style=" margin-right:15% ; font-weight:bolder; color: gray; text-align: center;" *ngIf="!product.launchable">COMING SOON</div>
+                <button disabled style="min-width: 30% ; background:gray; border-top-left-radius: 15px; color: white;" *ngIf="!subscribedAnalysis[product._id] &&!product.launchable" (click)="clickMe(product)">SUBSCRIBE</button>
+                <button  style="min-width: 30% ; background: black; border-top-left-radius: 15px; color: white;" *ngIf="!subscribedAnalysis[product._id] &&product.launchable" (click)="clickMe(product)">SUBSCRIBE</button>
+                <a href="{{api}}{{product.url}}?token={{token}}" style="padding-left:10%;min-width: 30%; background: black; border-top-left-radius: 15px; color: white;text-decoration:none;" [ngStyle]='{"display":subscribedAnalysis[product._id]?"block":"none"}' target="_blank">LAUNCH</a>
+              </div>
+            </div>
+         </div>
+      </div>   
+</div>
+</div> -->
+<div class="grid-container">
+  <app-navbar></app-navbar>
+  <app-main></app-main>
+  <app-footer></app-footer>
+</div>

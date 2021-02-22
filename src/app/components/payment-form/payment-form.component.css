@@ -1,0 +1,29 @@
+.form {
+    background-color:lightgray;
+}
+input[type=text] {
+    width: 100%;
+    padding: 4px 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color:whitesmoke;
+    border: 3px solid #555;
+  }
+#formLayout {
+    width:40%;
+    padding: 4px 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 33%;
+    padding:4px 4px;
+    background-color: darkgrey;
+}
+
+input[type="button"] {
+    width: 33%;
+    padding:4px 4px;
+    background-color: darkgrey;
+}

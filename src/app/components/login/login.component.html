@@ -1,0 +1,22 @@
+<div>
+    <div [formGroup]="loginGroup" class="flex-item-1">
+        <br>
+        <input class="input-style" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="emailAddress" type="text" placeholder="Your email / Mob. no.">
+        <div *ngIf="!valid_user" style="color:red;">{{message}}</div>
+        <input class="input-style" type="password" [ngStyle]="{'border-bottom': valid_user? 'green':'red'}" formControlName="password" placeholder="Password">
+        <div *ngIf="!valid_user" style="color:red;">{{message}}</div>
+        <div class="button-flex">
+            <button class="button" [ngStyle]="{'background':loginGroup.valid? '#4caf50':'#f44336'}" (click)="login()" type="button">Login</button>
+            <a class="link-color" routerLink="/forgot_password">Forgot Password</a>
+        </div>
+        
+       
+    </div>
+    <!-- <div class="flex-item-2">
+        <a class="nav-link-color" routerLinkActive="active" routerLink="/Home">Home</a>
+        <a class="nav-link-color" routerLinkActive="active" routerLink="/About">About</a>
+        <a class="nav-link-color" routerLinkActive="active" routerLink="/Help">Help</a>
+        <a class="nav-link-color" routerLinkActive="active" routerLink="/Help">Privacy</a>
+        <a class="nav-link-color" routerLinkActive="active" routerLink="/Terms">Terms</a>
+    </div> -->
+</div>

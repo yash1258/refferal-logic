@@ -1,0 +1,204 @@
+.grid-parent {
+    width:100%;
+    height:100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+    'profile product product'
+    'profile product product'
+    'launch product product';
+    background: #F5F5F5;
+    box-sizing: border-box;
+}
+
+.profile {
+    grid-area: profile;
+    width:100%;
+    height:100%;
+}
+
+.profile-flex-container {
+    width:100%;
+    height:50%;
+}
+
+.mat-card{
+    background: white;
+    color:black;
+}
+
+.product {
+    grid-area: product;
+    width:100%;
+    height:100%;
+    
+}
+
+.launch {
+    grid-area: launch;
+    width:100%;
+    height:100%;
+    
+}
+
+.launch-card{
+    width:100%;
+    height:100%; 
+}
+
+.launch-button {
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.user-flexbox {
+    display: flex;
+    width:100%;
+    height:50%;
+    padding:5%;
+}
+
+.user-flexbox-child {
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.grid-1 {
+    display: grid;
+    width:100%;
+    height:100%;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.grid-2 {
+     display: flex;
+     justify-content: space-around;
+     margin:10%;
+     width:80%;
+     height:50%;
+}
+
+.dashboard {
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    box-sizing: border-box;
+    width:80%;
+    height: 100%;
+    font-weight: bold;
+    color: rgb(88, 88, 88)
+}
+
+
+
+.search_plus_raise_ticket {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ticket {
+    background: lightgreen;
+    font-weight: bold;
+    flex: 0 1 20%;
+    width:20%;
+    margin-left: 60%;
+    box-sizing: border-box;
+
+}
+
+.search {
+    flex: 0 1 20%;
+    border-radius: 25px;
+    width:20%;
+    margin-left: 60%;
+    box-sizing: border-box;
+}
+
+.grid-child {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-child-header{
+    display: flex;
+    width:100%;
+    height:100%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+    color: gray;
+    font-weight: bold;
+}
+.grid-child-image {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-child-footer {
+    width: 100%;
+    height:100%;
+    border-top: 2px solid gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background: white;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background: white;
+  }
+
+  .grid-price {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: larger;
+      font-weight: bold;
+      color: darkcyan;
+      padding-top: 20px;
+
+  }
+
+  .days-remaining {
+    display:flex;
+    width: 100%;
+    margin-left: 80%;
+    justify-content: space-around;
+    font-size: medium;
+  }
+
+  .not-subscribed  {
+        border: none;
+  }
+
+  .subscribed {
+      border: 2px solid;
+      border-radius: 100%;
+      padding:10px;
+  }
+

@@ -1,0 +1,11 @@
+{
+    "NODE_ENV": "development",
+    "RAZORPAY_KEY": "rzp_test_lBhHjsRvYxn7sG",
+    "RAZORPAY_SECRET": "cxTSGnYWmQWCjCo5ZWnKMsIe",
+    "JWT_SECRET": "arstrdjjthdtdhgdtychgkhkdty",
+    "MAIL_AUTH":{
+        "user": "info@xponential.in",
+        "pass":"Gdu@32134"
+    }
+
+}
